@@ -23,7 +23,7 @@ class DoubleConv(nn.Module):
     def forward(self, x):
         inputs = F.interpolate(x, size=[64, 64],   mode='bilinear', align_corners=True)
         outputs = self.ub(inputs)
-        outputs = F.interpolate(outputs, size=[x.shape[2], x.shape[3]],   mode='bilinear', align_corners=True)
+        outputs = F.interpolate(outputs, size=[x.shape[2], x.shape[3]],   mode='bilinear', align_corners=True) + x
         return self.double_conv(outputs)
 
 
