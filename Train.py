@@ -24,8 +24,8 @@ def train(args):
     
     mse = nn.L1Loss().cuda()
     
-    content_folder1 = 'test/hazy'
-    information_folder = 'test/GT'
+    content_folder1 = 'train/hazy'
+    information_folder = 'train/GT'
     
     train_loader = dataset.style_loader(content_folder1, information_folder, args.size, 8)
     
