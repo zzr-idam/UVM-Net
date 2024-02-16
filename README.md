@@ -1,6 +1,6 @@
 # UVM-Net
 U-shaped Vision Mamba for Single Image Dehazing
-![image](https://github.com/zzr-idam/UVM-Net/blob/main/f3w.png)
+![image](https://github.com/zzr-idam/UVM-Net/blob/main/fw3.png)
 
 
 # UVMB
