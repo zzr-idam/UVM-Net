@@ -35,6 +35,15 @@ python Train.py
 ## Demo
 ![image](https://github.com/zzr-idam/UVM-Net/blob/main/demo.jpg)
 
+## Note
+Our method can also be performed on UHD (4K resolution) images on a single GPU, you just need to do the following:
+```
+ def forward(self, x):
+        x1 = F.interpolate(x, size=[512, 512], mode='bilinear', align_corners=True)
+        x1 = our_network(x1)    
+        output = F.interpolate(x1, size=[x.shape[2], x.shape[3]], mode='bilinear', align_corners=True) + x
+        return output
+```
 
 ## Citation
 To the best of our knowledge is the first image enhancement method to introduce Mamba technique in the low-level domain.
