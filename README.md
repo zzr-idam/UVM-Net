@@ -37,8 +37,8 @@ python Train.py
 
 
 ## Citation
-
-If you use this codebase, or otherwise found our work valuable, please cite Mamba:
+To the best of our knowledge is the first image enhancement method to introduce Mamba technique in the low-level domain.
+If you find this work useful for your research, please cite our paper:
 ```
 @article{zheng2024u,
   title={U-shaped Vision Mamba for Single Image Dehazing},
