@@ -21,6 +21,10 @@ Other requirements:
 # UVMB
 We show the basic modules of our network, with continuous improvements to follow.
 
+## Train
+
+python Train.py (Configure the folder for degraded images and the folder for GT.)
+
 # Demo
 ![image](https://github.com/zzr-idam/UVM-Net/blob/main/demo.jpg)
 
