@@ -18,6 +18,10 @@ Other requirements:
 - PyTorch 1.12+
 - CUDA 11.6+
 
+### Download
+
+You can download the pretrained models and datasets on [GoogleDrive](https://drive.google.com/drive/folders/1Yy_GH6_bydYPU6_JJzFQwig4LTh86VI4?usp=sharing) or [BaiduPan](https://pan.baidu.com/s/1WVdNccqDMnJ5k5Q__Y2dsg?pwd=gtuw) (gtuw).
+
 # UVMB
 We show the basic modules of our network, with continuous improvements to follow.
 
