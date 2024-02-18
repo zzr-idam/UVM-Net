@@ -34,6 +34,7 @@ python Train.py
 
 ## The Potential of Models
 Our method can perform tasks such as image dehazingg, deraining, and low-light enhancement.
+The first three images are the test images, the middle three images are the output of the model, and the last three are the GT.
 
 ![image](https://github.com/zzr-idam/UVM-Net/blob/main/demo.jpg)
 
