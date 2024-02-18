@@ -16,7 +16,7 @@ If `pip` complains about PyTorch versions, try passing `--no-build-isolation` to
 
 Other requirements:
 - Linux
-- NVIDIA GPU (48G RAM)
+- NVIDIA GPU (12G RAM)
 - PyTorch 1.12+
 - CUDA 11.6+
 
