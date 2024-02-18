@@ -40,6 +40,8 @@ The first three images are the test images, the middle three images are the outp
 
 ![image](https://github.com/zzr-idam/UVM-Net/blob/main/low-light.jpg)
 
+![image](https://github.com/zzr-idam/UVM-Net/blob/main/deblur.jpg)
+
 ![image](https://github.com/zzr-idam/UVM-Net/blob/main/derain.jpg)
 
 ![image](https://github.com/zzr-idam/UVM-Net/blob/main/underwater.jpg)
