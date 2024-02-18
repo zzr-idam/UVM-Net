@@ -35,16 +35,17 @@ class UVMB(nn.Module):
             expand=2,    # Block expansion factor
         )
         self.smooth = nn.Conv2d(in_channels=c, out_channels=c, kernel_size=3, stride=1, padding=1)
-
+        self.ln = nn.LayerNorm(normalized_shape=c)
+        self.softmax = nn.Softmax()
     def forward(self, x):
         b,c,w,h = x.shape
         x = self.convb(x) + x
-        x = nn.LayerNorm(normalized_shape=c)(x.reshape(b, -1, c))
+        x = self.ln(x.reshape(b, -1, c))
         y = self.model1(x).permute(0, 2, 1)
         z = self.model3(y).permute(0, 2, 1)
-        att = nn.Softmax()(self.model2(x))
+        att = self.softmax(self.model2(x))
         result = att * z
-        output = result.shape(b, c, w, h)
+        output = result.reshape(b, c, w, h)
         return self.smooth(output)
 
 
