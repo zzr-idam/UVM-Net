@@ -7,7 +7,7 @@ import torch.optim as optim
 from torch.utils.data import DataLoader
 
 from utils.dataset_utils import TrainDataset
-from net.model import SAFMN
+from net.model import Unet
 from utils.schedulers import LinearWarmupCosineAnnealingLR
 import numpy as np
 import wandb
@@ -17,10 +17,10 @@ from lightning.pytorch.loggers import WandbLogger,TensorBoardLogger
 from lightning.pytorch.callbacks import ModelCheckpoint
 
 
-class SAFMNModel(pl.LightningModule):
+class UnetModel(pl.LightningModule):
     def __init__(self):
         super().__init__()
-        self.net = SAFMN(dim=48, n_blocks=8, ffn_scale=2.0, upscaling_factor=4)
+        self.net = UNet(n_channels=3)
         self.loss_fn  = nn.L1Loss()
     
     def forward(self,x):
