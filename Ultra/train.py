@@ -7,7 +7,7 @@ import torch.optim as optim
 from torch.utils.data import DataLoader
 
 from utils.dataset_utils import TrainDataset
-from net.model import Unet
+from net.model import UNet
 from utils.schedulers import LinearWarmupCosineAnnealingLR
 import numpy as np
 import wandb
@@ -65,7 +65,7 @@ def main():
     trainloader = DataLoader(trainset, batch_size=opt.batch_size, pin_memory=True, shuffle=True,
                              drop_last=True, num_workers=opt.num_workers)
     
-    model = SAFMNModel()
+    model = UNet(n_channels=3)
     
     trainer = pl.Trainer(max_epochs=opt.epochs,accelerator="gpu",devices=opt.num_gpus,callbacks=[checkpoint_callback])
     trainer.fit(model=model, train_dataloaders=trainloader)
