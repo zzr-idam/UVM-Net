@@ -27,6 +27,14 @@ You can download the datasets on [GoogleDrive](https://drive.google.com/drive/fo
 ## UVMB
 We show the basic modules of our network, with continuous improvements to follow.
 
+There is no need to reduce the number of layers in the UNet, my basic module has three SSMs, you can remove the one that is the most computationally intensive (after reshaping); besides, you can conduct a ReLU or Sigmoid on the output of the UNet and do a residual or multiplication operation with the original input image.
+
+output = nn.ReLU()(UNet(x))
+
+output = output * x - output + 1 // AODNet equation
+
+return output
+
 ## Train
 ```
 python Train.py
